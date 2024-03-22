@@ -1,0 +1,112 @@
+@charset "utf-8";
+
+:root {
+  --background-color: rgb(28, 28, 30);
+  --transition: all .15s ease-in-out;
+}
+
+.container {
+  width: min(100% - 30px, 1080px);
+  margin-inline: auto;
+  padding: 40px 0;
+}
+
+* {
+  margin: 0px;
+}
+
+main {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.flex {
+  display: flex;
+}
+
+.gap {
+  gap: 20px;
+}
+
+/*---CONTENT---*/
+
+
+.options, .output {
+  width: 600px;
+}
+
+.options {
+  height: 48px;
+  margin-bottom: 20px;
+}
+
+select, input[type="button"] {
+  padding: 0 25px;
+  color: #fff;
+}
+
+select {
+  width: 50%;
+  background-color: rgba(255, 255, 255, 0.05);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+select option {
+  background-color: rgba(255, 255, 255, 0.05); 
+}
+
+/* Style for hover state of select element */
+select:hover {
+  border-color: #aaa;
+}
+
+input[type="button"] {
+  border: 2px solid rgb(94, 32, 148);
+  background: var(--background-color);
+}
+
+input[type="button"]:hover {
+  background: rgb(94, 32, 148);
+}
+
+
+.output {
+  background-color: rgba(255, 255, 255, 0.05);
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 10px; 
+  padding: 10px;
+}
+
+.square, .circle {
+  aspect-ratio: 1/1;
+}
+
+.circle {border-radius: 50%;}
+.square {border-radius: 4px;}
+
+.blue {background-color: #09f;}
+.green {background-color: #9f0;}
+.orange {background-color: #f90;}
+.pink {background-color: #f09;}
+.purple {background-color: #90f;}
